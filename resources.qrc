@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/batch_heatmaps" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BatchHeatmapsDialogBase</class>
+ <widget class="QDialog" name="BatchHeatmapsDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>331</width>
+    <height>295</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Batch Heatmaps</string>
+  </property>
+  <widget class="QTabWidget" name="BatchHeatmaps_Tab">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>311</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <property name="tabPosition">
+    <enum>QTabWidget::North</enum>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_1">
+    <attribute name="title">
+     <string>Shapefile</string>
+    </attribute>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Arquivo:</string>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="tb_Shapefiles">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>10</y>
+       <width>25</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cb_LayerFields">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="cb_fields">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Campo de datas:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cb_Shapes">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>10</y>
+       <width>141</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="insertPolicy">
+      <enum>QComboBox::InsertAtTop</enum>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cb_dataFormat">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>80</y>
+       <width>151</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>%d/%m/%Y</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>%d/%m/%y</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>%m/%d/%y</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>%m/%d/%Y</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>%Y/%m/%d</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>%d/%m/%Y %H:%M:%S</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>%d/%m/%Y %H:%M</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Formato da Data:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Mapa de Calor</string>
+    </attribute>
+    <widget class="QComboBox" name="cbTempoHeatmap">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>10</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="frame">
+      <bool>true</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>Ano</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Estações - Hemisfério Sul</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Estações - Hemisfério Norte</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Semestre</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Quadrimestre</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Trimestre</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Bimestre</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Mes</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Quinzena</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Semana Fixa</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Semana Corrida</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Semana Epidemiológica</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>36</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tempo:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>70</y>
+       <width>25</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Raio:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox_Radius">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>70</y>
+       <width>65</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <double>1000.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>159</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Escala:</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="lowest_MaximumDensity">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>179</y>
+       <width>141</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Menor densidade máxima</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="highest_MaximumDensity">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>180</y>
+       <width>141</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Maior densidade máxima</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>129</y>
+       <width>88</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tamanho do Pixel:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox_Pixel">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>130</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>2</number>
+     </property>
+     <property name="maximum">
+      <double>9999.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox_Columns">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>100</y>
+       <width>65</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <double>9999.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>100</y>
+       <width>42</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Colunas:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>100</y>
+       <width>34</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Linhas:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBox_Rows">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>100</y>
+       <width>65</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="decimals">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <double>9999.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Nome do Grupo:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="line_groupName">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_groupName">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>40</y>
+       <width>21</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>=</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <property name="toolTipDuration">
+     <number>-1</number>
+    </property>
+    <attribute name="title">
+     <string>Salvar</string>
+    </attribute>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Local:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="line_saveLocation">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>251</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>[Salvar para arquivo temporário]</string>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="tb_saveHeatmap">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>40</y>
+       <width>25</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>...</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="raw_Data">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Raw Data</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="rendered_Image">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>90</y>
+       <width>121</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Imagem Renderizada</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="btn_close">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>260</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fechar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_ok">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>260</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
