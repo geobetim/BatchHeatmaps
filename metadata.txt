@@ -13,8 +13,8 @@ email=geo@betim.mg.gov.br
 about=This plugin automatically generates batch heatmaps at different time intervals (Year, Semester, Month, Fortnight, Epidemiological Week).
 
 
-tracker=http://bugs
-repository=http://repo
+tracker=https://github.com/geobetim/BatchHeatmaps/issues
+repository=https://github.com/geobetim/BatchHeatmaps
 # End of mandatory metadata
 
 # Recommended items:
@@ -26,7 +26,7 @@ hasProcessingProvider=no
 # Tags are comma separated with spaces allowed
 tags=heatmaps, time, batch, maps
 
-homepage=http://homepage
+homepage=https://github.com/geobetim/BatchHeatmaps
 category=Plugins
 icon=icon.png
 # experimental flag
