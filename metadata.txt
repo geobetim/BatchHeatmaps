@@ -8,7 +8,7 @@ qgisMinimumVersion=3.0
 description=Plugin to automatically generate heatmaps
 version=1.0
 author=Prefeitura Municipal de Betim
-email=geo@betim.mg.gov.br
+email=equipegeobetim@gmail.com
 
 about=This plugin automatically generates batch heatmaps at different time intervals (Year, Semester, Month, Fortnight, Epidemiological Week).
 
