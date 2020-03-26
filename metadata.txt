@@ -1,20 +1,16 @@
-# This file contains metadata for your plugin.
-
-# This file should be included when you package your plugin.# Mandatory items:
-
 [general]
 name=Batch Heatmaps
 qgisMinimumVersion=3.0
 description=Plugin to automatically generate heatmaps
-version=1.0.0
+version=1.0.1
 author=Prefeitura Municipal de Betim
 email=equipegeobetim@gmail.com
 
 about=This plugin automatically generates batch heatmaps at different time intervals (Year, Semester, Month, Fortnight, Epidemiological Week).
 
-
 tracker=https://github.com/geobetim/BatchHeatmaps/issues
 repository=https://github.com/geobetim/BatchHeatmaps
 
+changelog=minor bug fix
 
 
