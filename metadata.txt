@@ -2,7 +2,7 @@
 name=Batch Heatmaps
 qgisMinimumVersion=3.0
 description=Plugin to automatically generate heatmaps
-version=1.0.1
+version=1.0
 author=Prefeitura Municipal de Betim
 email=equipegeobetim@gmail.com
 
@@ -10,7 +10,3 @@ about=This plugin automatically generates batch heatmaps at different time inter
 
 tracker=https://github.com/geobetim/BatchHeatmaps/issues
 repository=https://github.com/geobetim/BatchHeatmaps
-
-changelog=minor bug fix
-
-
