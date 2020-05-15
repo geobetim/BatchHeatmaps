@@ -5,6 +5,7 @@ description=Plugin to automatically generate heatmaps
 version=1.1
 author=Prefeitura Municipal de Betim
 email=equipegeobetim@gmail.com
+homepage=https://github.com/geobetim/BatchHeatmaps
 
 about=This plugin automatically generates batch heatmaps at different time intervals (Year, Semester, Month, Fortnight, Epidemiological Week).
 
