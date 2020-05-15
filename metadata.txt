@@ -10,3 +10,7 @@ about=This plugin automatically generates batch heatmaps at different time inter
 
 tracker=https://github.com/geobetim/BatchHeatmaps/issues
 repository=https://github.com/geobetim/BatchHeatmaps
+
+changelog=1.1 2020-05-15
+	*Changed language to english
+	*Fixed bugs when labeling heatmaps names based on bands maximum and minimum statistics

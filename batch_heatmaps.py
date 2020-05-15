@@ -256,7 +256,7 @@ class BatchHeatmaps:
             root.removeChildNode(layersGroup)
  
         self.layersCombobox() #update new project layers to combobox
-        self.dlg.line_saveLocation.setText("[Salvar para arquivo temporário]")
+        self.dlg.line_saveLocation.setText("[Save to temporary file]")
         self.removeShapefile()
         self.closePlugin()  
         self.restartProgressBar()
@@ -615,68 +615,68 @@ class BatchHeatmaps:
         	insertListSeason(northSeasons=True)
 
         def SemanaEpidemiologica():
-            prefix = "SemanaEpidemiológica" 
+            prefix = "Epidemiological Week" 
             insertListEpiWeek(prefix)
 
         def SemanaFixa():
             timeInterval = 52
-            prefix = "SemanaFixa"
+            prefix = "Fixed Week"
             insertList(timeInterval, prefix, semanaFixa = True)
 
         def SemanaCorrida():
             timeInterval = 52
-            prefix = "SemanaCorrida"
+            prefix = "Floating Week"
             insertList(timeInterval, prefix, semanaCorrida = True)
 
         def Quinzena():
             timeInterval = 24
-            prefix = "Quinzena"
+            prefix = "Fortnight"
             insertList(timeInterval, prefix, Quinzena = True)
 
         def Mensal():
             timeInterval = 12
-            prefix = "Mes"
+            prefix = "Month"
             insertList(timeInterval, prefix)
 
         def Bimestre():
             timeInterval = 6
-            prefix = "Bimestre"
+            prefix = "Two-Months"
             insertList(timeInterval, prefix)
 
         def Trimestre():
             timeInterval = 4
-            prefix = "Trimestre"
+            prefix = "Trimester"
             insertList(timeInterval, prefix)
 
         def Quadrimestre():
             timeInterval = 3
-            prefix = "Quadrimestre"
+            prefix = "Four-Months"
             insertList(timeInterval, prefix)
 
         def Semestre():
             timeInterval = 2
-            prefix = "Semestre"
+            prefix = "Semester"
             insertList(timeInterval, prefix)
 
         def Anual():
             timeInterval = 1
-            prefix = "Ano"
+            prefix = "Year"
             insertList(timeInterval, prefix)
 
 
         dictionary={
-        "Estações - Hemisfério Sul":EstacaoSul,
-        "Estações - Hemisfério Norte":EstacaoNorte,
-        "Quinzena":Quinzena,
-        "Semana Epidemiológica":SemanaEpidemiologica,
-        "Semana Fixa":SemanaFixa,
-        "Semana Corrida":SemanaCorrida,
-        "Bimestre":Bimestre,
-        "Trimestre":Trimestre,
-        "Quadrimestre":Quadrimestre,
-        "Semestre":Semestre,
-        "Mes":Mensal,
-        "Ano":Anual
+        "Seasons - South Hemisphere":EstacaoSul,
+        "Seasons -  North Hemisphere":EstacaoNorte,
+        "Fortnight":Quinzena,
+        "Epidemiological Week":SemanaEpidemiologica,
+        "Fixed Week":SemanaFixa,
+        "Floating Week":SemanaCorrida,
+        "Two-Months":Bimestre,
+        "Trimester":Trimestre,
+        "Four-Months":Quadrimestre,
+        "Semester":Semestre,
+        "Month":Mensal,
+        "Year":Anual
         }
 
         dictionary.get(timePeriod)()
@@ -737,7 +737,7 @@ class BatchHeatmaps:
         username = os.getlogin()
 
         if self.dlg.raw_Data.isChecked():
-        	if self.dlg.line_saveLocation.text() == '[Salvar para arquivo temporário]':
+        	if self.dlg.line_saveLocation.text() == '[Save to temporary file]':
         		saveHeatMapPath = 'C:/Users/{}/AppData/Local/Temp'.format(username)
         	elif self.dlg.line_saveLocation.text() == '':
         		saveHeatMapPath = 'C:/Users/{}/AppData/Local/Temp'.format(username)
@@ -749,7 +749,7 @@ class BatchHeatmaps:
 
 
         for code in codeList:
-            self.dlg_progress.progress_text.setText("Gerando Heatmap {}...".format(code))
+            self.dlg_progress.progress_text.setText("Generating Heatmap {}...".format(code))
             value+=percent
             self.dlg_progress.progress_bar.setValue(value)
     
@@ -806,10 +806,10 @@ class BatchHeatmaps:
                 
                 stats = provider.bandStatistics(1, QgsRasterBandStats.All, extent, 0) 
 
-                if stats.maximumValue == max(MaximumBandStatisticsList):
+                if stats.maximumValue == max(MaximumBandStatisticsList) and stats.maximumValue != min(MaximumBandStatisticsList):
                 	heatmap.setName(heatmap.name()+"_Max")
 
-                if stats.maximumValue == min(MaximumBandStatisticsList):
+                if stats.maximumValue == min(MaximumBandStatisticsList) and stats.maximumValue != max(MaximumBandStatisticsList):
                 	heatmap.setName(heatmap.name()+"_Min")
 
                 #Minimum, maximum and intermediate ranges for calculating scales
@@ -845,7 +845,7 @@ class BatchHeatmaps:
 
                 heatmap.triggerRepaint()
                 if self.dlg.rendered_Image.isChecked():
-                    if self.dlg.line_saveLocation.text() == '' or self.dlg.line_saveLocation.text() == '[Salvar para arquivo temporário]':
+                    if self.dlg.line_saveLocation.text() == '' or self.dlg.line_saveLocation.text() == '[Save to temporary file]':
                     	pass
                     else:
                         self.saveRenderedHeatmap(heatmap)
@@ -864,7 +864,7 @@ class BatchHeatmaps:
         pipe.set(renderer.clone())
         file_writer = QgsRasterFileWriter('{}/{}{}'.format(saveHeatmapPath, layer.name(),fileFormat))
         file_writer.writeRaster(pipe,width,height,extent,layer.crs())
-        self.iface.messageBar().pushMessage("Heatmaps salvos em: ", saveHeatmapPath, level=Qgis.Info, duration=5)
+        self.iface.messageBar().pushMessage("Heatmaps save location: ", saveHeatmapPath, level=Qgis.Info, duration=5)
 
     def generateVideo(self):
 

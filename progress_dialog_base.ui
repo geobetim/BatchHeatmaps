@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Executando...</string>
+   <string>Executing...</string>
   </property>
   <widget class="QProgressBar" name="progress_bar">
    <property name="geometry">

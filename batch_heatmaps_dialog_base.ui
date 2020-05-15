@@ -32,7 +32,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab_1">
     <attribute name="title">
@@ -48,7 +48,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Arquivo:</string>
+      <string>File:</string>
      </property>
     </widget>
     <widget class="QToolButton" name="tb_Shapefiles">
@@ -87,7 +87,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Campo de datas:</string>
+      <string>Date Field:</string>
      </property>
     </widget>
     <widget class="QComboBox" name="cb_Shapes">
@@ -167,13 +167,13 @@
       </rect>
      </property>
      <property name="text">
-      <string>Formato da Data:</string>
+      <string>Date Format:</string>
      </property>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="title">
-     <string>Mapa de Calor</string>
+     <string>Heatmap</string>
     </attribute>
     <widget class="QComboBox" name="cbTempoHeatmap">
      <property name="geometry">
@@ -189,62 +189,62 @@
      </property>
      <item>
       <property name="text">
-       <string>Ano</string>
+       <string>Year</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Estações - Hemisfério Sul</string>
+       <string>Seasons - South Hemisphere</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Estações - Hemisfério Norte</string>
+       <string>Seasons -  North Hemisphere</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Semestre</string>
+       <string>Semester</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Quadrimestre</string>
+       <string>Four-Months</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Trimestre</string>
+       <string>Trimester</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Bimestre</string>
+       <string>Two-Months</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Mes</string>
+       <string>Month</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Quinzena</string>
+       <string>Fortnight</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Semana Fixa</string>
+       <string>Fixed Week</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Semana Corrida</string>
+       <string>Floating Week</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string>Semana Epidemiológica</string>
+       <string>Epidemiological Week</string>
       </property>
      </item>
     </widget>
@@ -258,7 +258,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Tempo:</string>
+      <string>Time:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_9">
@@ -266,12 +266,12 @@
       <rect>
        <x>11</x>
        <y>70</y>
-       <width>25</width>
+       <width>41</width>
        <height>16</height>
       </rect>
      </property>
      <property name="text">
-      <string>Raio:</string>
+      <string>Radius:</string>
      </property>
     </widget>
     <widget class="QDoubleSpinBox" name="doubleSpinBox_Radius">
@@ -297,7 +297,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Escala:</string>
+      <string>Scale:</string>
      </property>
     </widget>
     <widget class="QRadioButton" name="lowest_MaximumDensity">
@@ -313,7 +313,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Menor densidade máxima</string>
+      <string>Lowest maximum density</string>
      </property>
     </widget>
     <widget class="QRadioButton" name="highest_MaximumDensity">
@@ -326,7 +326,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Maior densidade máxima</string>
+      <string>Highest maximum density</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -342,7 +342,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Tamanho do Pixel:</string>
+      <string>Pixel Size:</string>
      </property>
     </widget>
     <widget class="QDoubleSpinBox" name="doubleSpinBox_Pixel">
@@ -387,7 +387,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Colunas:</string>
+      <string>Columns:</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_6">
@@ -400,7 +400,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Linhas:</string>
+      <string>Rows:</string>
      </property>
     </widget>
     <widget class="QDoubleSpinBox" name="doubleSpinBox_Rows">
@@ -429,7 +429,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Nome do Grupo:</string>
+      <string>Group Name:</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="line_groupName">
@@ -461,7 +461,7 @@
      <number>-1</number>
     </property>
     <attribute name="title">
-     <string>Salvar</string>
+     <string>Save</string>
     </attribute>
     <widget class="QLabel" name="label_10">
      <property name="geometry">
@@ -473,7 +473,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Local:</string>
+      <string>Path:</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="line_saveLocation">
@@ -489,7 +489,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>[Salvar para arquivo temporário]</string>
+      <string>[Save to temporary file]</string>
      </property>
      <property name="readOnly">
       <bool>false</bool>
@@ -534,7 +534,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Imagem Renderizada</string>
+      <string>Rendered Image</string>
      </property>
     </widget>
    </widget>
@@ -549,7 +549,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Fechar</string>
+    <string>Close</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_ok">
